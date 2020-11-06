@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+*, *::before, *::after {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top left, rgb(246,145,117), rgb(156,92,215));
+}
+
+.calculator {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: minmax(10rem, max-content) repeat(5, auto);
+}
+
+.calculator > button {
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.calculator > button:hover {
+    box-shadow: inset -5px -5px 10px rgb(212, 200, 200), inset 5px 5px 10px  rgb(212, 200, 200);
+    filter: brightness(.85);
+}
+
+.calculator > button:active {
+    box-shadow: inset -5px -5px 10px rgb(175, 171, 171), inset 5px 5px 10px rgb(175, 171, 171);
+    filter: brightness(.7)
+}
+
+.output {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: rgb(33, 33, 33);
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output > .operation {
+    color: rgb(205, 153, 166);
+    font-size: 1.2rem;
+}
+
+.output > .result {
+    color: #fefefe;
+    font-size: 3.5rem;
+}
+
+.calculator > .white-row-one {
+    background: linear-gradient(to right, #F7F7F7, #F1F1F1);
+}
+
+.calculator > .white-row-other {
+    background: linear-gradient(to bottom right, #FFFFFF, #F3F3F3);
+}
+
+.calculator > .pink {
+    grid-column: span 2;
+    background-color: rgba(230, 47, 137);
+    color: #FFFFFF;
+}
+
+.calculator > .pink:hover {
+    box-shadow: inset -5px -5px 10px rgb(173, 32, 103), inset 5px 5px 10px rgb(173, 32, 103);
+    filter: brightness(.85);
+}
+
+.calculator > .pink:active {
+    box-shadow: inset -5px -5px 10px rgb(131, 24, 77), inset 5px 5px 10px rgb(131, 24, 77);
+    filter: brightness(.7)
+}
+
+.calculator > .violet {
+    color: #FFFFFF;
+}
+
+.calculator > .violet:hover {
+    box-shadow: inset -5px -5px 10px rgb(112, 59, 180), inset 5px 5px 10px rgb(112, 59, 180);
+    filter: brightness(.85);
+}
+
+.calculator > .violet:active {
+    box-shadow: inset -5px -5px 10px rgb(90, 48, 146), inset 5px 5px 10px rgb(90, 48, 146);
+    filter: brightness(.7);
+}
+
+.calculator >.add {
+    background-color: rgba(133, 71, 216);
+}
+
+.calculator >.subtract {
+    background-color: rgba(137, 78, 218);
+}
+
+.calculator >.multiply {
+    background-color: rgba(140, 81, 221);
+}
+
+.calculator >.divide {
+    background-color: rgba(145, 86, 226);
+}
+
+@media (min-width: 576px) {
+
+    .calculator {
+        justify-content: center;
+        align-content: center;
+        min-height: 100vh;
+        grid-template-columns: repeat(4, 6rem);
+        grid-template-rows: minmax(10rem, max-content) repeat(5, 6rem);
+    }
+
+    .calculator div {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    
+    .calculator .right-bottom {
+        border-bottom-right-radius: 5px;
+    }
+    
+    .calculator .left-bottom {
+        border-bottom-left-radius: 5px;
+    }
+    
+}
